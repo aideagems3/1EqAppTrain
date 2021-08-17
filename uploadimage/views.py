@@ -38,6 +38,7 @@ def upload(request): #หน้า aidea.html
         vol_name = request.POST['typeDataBox']
         # ประเภทอุปกรณ์
         eq_name = request.POST['subject']
+
         # ชนิดอุปกรณ์
         subeq_name = request.POST['topic']
         # สาเหตุการชำรุด
@@ -151,11 +152,20 @@ def upload(request): #หน้า aidea.html
                 if  vol_name == "TA" and eq_name == "JO" and subeq_name == "หางปลา":
                     subeq_name = "3A"
 
+                if  vol_name == "TA" and eq_name == "CO" and subeq_name == "strain clamp":
+                    subeq_name = "1D"
+         
+                if  vol_name == "DA" and eq_name == "CO" and subeq_name == "strain clamp":
+                    subeq_name = "2D"
+                
+                if  vol_name == "DB" and eq_name == "CO" and subeq_name == "strain clamp":
+                    subeq_name = "2D"
+
                     #ชุดแรงดันที่ รหัสตรงกัน
-                if  subeq_name == "เสาคอนกรีต" or subeq_name == "สาย OHGW" or subeq_name == "ลูกถ้วยกระเบื้อง : ชนิด Pin Type" or subeq_name == "สายเปลือย" or subeq_name == "หลอดต่อสาย" or subeq_name == "recloser" or subeq_name == "กับดักเสิร์จกระเบื้อง : สายลีดเข้าหัวกับดักเสิร์จ" or subeq_name == "กับดักเสิร์จกระเบื้อง : สายลีดเข้าหัวกับดักเสิร์จ" or subeq_name == "fix capacitor" or subeq_name == "VT" or subeq_name == "สาย OHGW/OPGW" or subeq_name == "ลูกถ้วยกระเบื้อง" or subeq_name == "circuit switcher":
+                if  subeq_name == "เสาคอนกรีต" or subeq_name == "สาย OHGW" or subeq_name == "ลูกถ้วยกระเบื้อง : ชนิด Pin Type" or subeq_name == "สายเปลือย" or subeq_name == "หลอดต่อสาย" or subeq_name == "recloser" or subeq_name == "กับดักเสิร์จกระเบื้อง : สายลีดเข้าหัวกับดักเสิร์จ" or subeq_name == "กับดักเสิร์จกระเบื้อง : สายลีดเข้าหัวกับดักเสิร์จ" or subeq_name == "fix capacitor" or subeq_name == "CT" or subeq_name == "สาย OHGW/OPGW" or subeq_name == "ลูกถ้วยกระเบื้อง" or subeq_name == "circuit switcher":
                     subeq_name = "0A"
 
-                if  subeq_name == "เสาโครงเหล็ก" or subeq_name == "เหล็กรองรับสาย OHGW" or subeq_name == "ลูกถ้วยคอมโพสิท" or subeq_name == "สายหุ้มฉนวน" or subeq_name == "pg clamp" or subeq_name == "load break switch (SF6 )" or subeq_name == "กับดักเสิร์จคอมโพสิท" or subeq_name == "switching capacitor" or subeq_name == "VT" or subeq_name == "เหล็กรองรับสาย OHGW/OPGW" or subeq_name == "preform armorod" or subeq_name =="t-slip":
+                if  subeq_name == "เสาโครงเหล็ก" or subeq_name == "เหล็กรองรับสาย OHGW" or subeq_name == "ลูกถ้วยคอมโพสิท" or subeq_name == "สายหุ้มฉนวน" or subeq_name == "pg clamp" or subeq_name == "load break switch" or subeq_name == "กับดักเสิร์จคอมโพสิท" or subeq_name == "switching capacitor" or subeq_name == "VT" or subeq_name == "เหล็กรองรับสาย OHGW/OPGW" or subeq_name == "preform armorod" or subeq_name =="t-slip":
                     subeq_name = "1A"
 
                 if  subeq_name == "คอนคอนกรีต" or subeq_name == "สาย GROUND" or subeq_name == "ลูกถ้วยแก้วเหนียว" or subeq_name == "tie wire" or subeq_name == "belt clamp,hotline clamp" or subeq_name == "air break switch":
@@ -173,6 +183,9 @@ def upload(request): #หน้า aidea.html
                 if  subeq_name == "คอนเหล็ก" or subeq_name == "cover tie wire":
                     subeq_name = "2B"
 
+                if  subeq_name == "สเปเซอร์คอมโพสิท":
+                    subeq_name = "3B"
+
                 if  subeq_name == "ลูกถ้วยกระเบื้อง : ชนิด Pin Post":
                     subeq_name = "0C"
 
@@ -181,7 +194,7 @@ def upload(request): #หน้า aidea.html
 
                 if  subeq_name == "snap tie":
                     subeq_name = "2C"
-
+        
                 if  subeq_name == "pin terminal":
                     subeq_name = "5A"
 
@@ -191,11 +204,11 @@ def upload(request): #หน้า aidea.html
                 if  subeq_name == "preform แยกสาย":
                     subeq_name = "1C"
                 
-                if  subeq_name == "strain clamp":
-                    subeq_name = "1D"
-
                 if  subeq_name == "suspension clamp":
                     subeq_name = "1E"
+
+                if  subeq_name == "preform":
+                    subeq_name = "2E"
                     
                 if  subeq_name =="ชนิดอุปกรณ์":
                     subeq_name == "Error"
@@ -453,7 +466,7 @@ def upload(request): #หน้า aidea.html
 
                 #path_fileแบบไม่ต้องพิมเอง
                 path_file = os.path.join(os.getcwd(), "media", f_image.name)
-                print(path_file)
+                print("your path_file:",path_file)
 
                   # UP image cload
                 with open(path_file, 'rb') as payload:
