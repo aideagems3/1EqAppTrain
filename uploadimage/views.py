@@ -162,7 +162,7 @@ def upload(request): #หน้า aidea.html
                     subeq_name = "2D"
 
                     #ชุดแรงดันที่ รหัสตรงกัน
-                if  subeq_name == "เสาคอนกรีต" or subeq_name == "สาย OHGW" or subeq_name == "ลูกถ้วยกระเบื้อง : ชนิด Pin Type" or subeq_name == "สายเปลือย" or subeq_name == "หลอดต่อสาย" or subeq_name == "recloser" or subeq_name == "กับดักเสิร์จกระเบื้อง : สายลีดเข้าหัวกับดักเสิร์จ" or subeq_name == "กับดักเสิร์จกระเบื้อง : สายลีดเข้าหัวกับดักเสิร์จ" or subeq_name == "fix capacitor" or subeq_name == "CT" or subeq_name == "สาย OHGW,OPGW" or subeq_name == "ลูกถ้วยกระเบื้อง" or subeq_name == "circuit switcher":
+                if  subeq_name == "เสาคอนกรีต" or subeq_name == "สาย OHGW" or subeq_name == "ลูกถ้วยกระเบื้อง : ชนิด Pin Type" or subeq_name == "สายเปลือย" or subeq_name == "หลอดต่อสาย" or subeq_name == "recloser" or subeq_name == "กับดักเสิร์จกระเบื้อง" or subeq_name == "fix capacitor" or subeq_name == "CT" or subeq_name == "สาย OHGW,OPGW" or subeq_name == "ลูกถ้วยกระเบื้อง" or subeq_name == "circuit switcher":
                     subeq_name = "0A"
 
                 if  subeq_name == "เสาโครงเหล็ก" or subeq_name == "เหล็กรองรับสาย OHGW" or subeq_name == "ลูกถ้วยคอมโพสิท" or subeq_name == "สายหุ้มฉนวน" or subeq_name == "pg clamp" or subeq_name == "load break switch" or subeq_name == "กับดักเสิร์จคอมโพสิท" or subeq_name == "switching capacitor" or subeq_name == "VT" or subeq_name == "เหล็กรองรับสาย OHGW,OPGW" or subeq_name == "preform armorod" or subeq_name =="t-slip":
