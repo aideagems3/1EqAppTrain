@@ -262,7 +262,7 @@
         //         );
         //     });
     </script>
-    <form name="myform" method="POST" enctype="multipart/form-data">
+    <form name="myform" method="POST" onsubmit="return checkForm(this);" enctype="multipart/form-data">
         {% csrf_token %}
         <form name="myform" method="POST" enctype="multipart/form-data" style="margin-top:5%;">
 
@@ -380,7 +380,7 @@
 
                           </div>
                           <div class="col">
-                            <a href="/complete">   <input id="btn_submit_S" type="submit"  value="ส่งข้อมูล"> </a>
+                            <a href="/complete">   <input id="btn_submit_S" name="myButton" type="submit" value="ส่งข้อมูล" > </a>
 
                           </div>
                           
@@ -436,6 +436,21 @@
 
         
     </script>
+        <script>
+        
+        let fill_chapter = document.getElementById('chapter');
+   
+        function checkForm(form){
+            if (fill_chapter.length != 0 ){
+                console.log("access click funct");
+                form.myButton.disabled =true;
+                return true;
+                
+            }
+        }
+       
+        
+        </script>
         <!-- #กรอกเฉพาะตัวเลข -->
         <script>
         function onlyNumberKey(evt) {
