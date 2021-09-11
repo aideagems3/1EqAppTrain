@@ -1,3 +1,0 @@
-https://cron-job.org/en/
-user : saran.kan.pea@gmail.com
-awake: everyday 6am-10pm every 30min
